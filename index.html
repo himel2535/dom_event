@@ -1,38 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM Event</title>
-</head>
-<body>
+  </head>
+  <body>
     <main>
-        <h1>Dom doma dom events</h1>
-        <!-- option 1 for event handler (in generally we wouldn't use it)-->
-        <button onclick="console.log(10)">Click Me</button>
-        <button onclick="console.log('moja')">click me 2</button>
-        <br>
+      <h1>Dom doma dom events</h1>
+      <!-- option 1 for event handler (in generally we wouldn't use it)-->
+      <button onclick="console.log(10)">Click Me</button>
+      <button onclick="console.log('moja')">click me 2</button>
+      <br />
 
-        <!-- option 2 for event handler -->
+      <!-- option 2 for event handler -->
 
-        <button onclick="makeYellow()">on click</button>
-        <button onclick="makeRed()">make red btn</button>
-        <br>
-        <br>
-        <br>
-        <button id="btn-make-blue">make blue</button>
-        <br>
-        <br>
-        <br>
-        <button id="btn-make-purple">make purple</button>
-
+      <button onclick="makeYellow()">on click</button>
+      <button onclick="makeRed()">make red btn</button>
+      <br />
+      <br />
+      <br />
+      <!-- option 3 for event handler -->
+      <button id="btn-make-blue">make blue</button>
+      <br />
+      <br />
+      <br />
+      <!-- option 3 another version -->
+      <button id="btn-make-purple">make purple</button>
+      <br />
+      <br />
+      <br />
+      <!-- option 4 addEventListener -->
+      <button id="btn-make-green">make green</button>
+      <br>
+      <br>
+      <br>
+      <button id="make-skyblue">make skyblue</button>
     </main>
 
     <script>
+        // getElementById().addEventListener('event type,handler')
+        document.getElementById('btn-make-green').addEventListener('click',function makeGreen(){
+            document.body.style.backgroundColor='green'
+        })
 
+        document.getElementById('make-skyblue').addEventListener('click',function(){
+            document.body.style.backgroundColor='skyblue'
+        })
     </script>
 
     <script src="js/event.js"></script>
-
-</body>
+  </body>
 </html>
