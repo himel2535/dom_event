@@ -18,8 +18,16 @@ document.getElementById("btn-update").addEventListener("click", function () {
   // step-2: get the text from the input field
   const nameInput = document.getElementById("input-name");
   const name = nameInput.value;
-//   console.log("name", name);
+  //   console.log("name", name);
   // set the name
   const nameP = document.getElementById("name");
   nameP.innerText = name;
+});
+
+document.getElementById("btn-clk").addEventListener("click", function () {
+  const txt = document.getElementById("input-text");
+  txtValue = txt.value;
+  // console.log('kocormocor',txtValue)
+  const peraName = document.getElementById("p-name");
+  peraName.innerText = txtValue;
 });
