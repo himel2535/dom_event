@@ -43,9 +43,11 @@
       </div>
     </main>
     <script>
+        // step-1: set an event hardler to bttn
       document.getElementById("cmnt").addEventListener("click", function () {
-        const text = document.getElementById("txt");
-        const myText = text.value;
+        // step-2:---->
+        const textBox = document.getElementById("txt");
+        const myText = textBox.value;
         // step 3 get the parent where to publish-->
         const cmntList = document.getElementById("comment-list");
         // console.log(cmntList);
@@ -57,6 +59,8 @@
         commentElement.classList.add('comment')
         // step-5: append the new p tag to the parent node
         cmntList.appendChild(commentElement);
+        // step-6 : after commenting text will be removed
+        textBox.value= '' ;
 
       });
     </script>
