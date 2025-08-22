@@ -14,17 +14,15 @@
       document
         .getElementById("input-delete")
         .addEventListener("keyup", function (event) {
-            
           const text = event.target.value;
-          const btnDelete=document.getElementById('btn-delete')
+          const btnDelete = document.getElementById("btn-delete");
           console.log("user is typing", text);
-          if (text==="delete"){
-            console.log('delete type')
-            btnDelete.removeAttribute('disabled');
-          }
-          else{
-            console.log('something else')
-            btnDelete.setAttribute('disabled',true)
+          if (text === "delete") {
+            console.log("delete type");
+            btnDelete.removeAttribute("disabled");
+          } else {
+            console.log("something else");
+            btnDelete.setAttribute("disabled", true);
           }
         });
     </script>
